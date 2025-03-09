@@ -5,17 +5,17 @@ btn_var.addEventListener('click', () => {
     let id_var = Number(document.querySelector('#ip').value); // Ensure it's a number
     console.log(id_var);
 
-    new Promise((resolve) => {
+    let p = new Promise((resolve) => {
         setTimeout(() => {
-            div_var.textContent = `Result : ${id_var}`;
+            div_var.textContent = `Result: ${id_var}`;
             resolve(id_var);
         }, 2000);
     })
-    .then((number) => {
+    p.then((number) => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 let mul = number * 2;
-                div_var.textContent = `Result : ${mul}`;
+                div_var.textContent = `Result: ${mul}`;
                 resolve(mul);
             }, 2000);
         });
@@ -24,7 +24,7 @@ btn_var.addEventListener('click', () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 let sub = mul - 3;
-                div_var.textContent = `Result : ${sub}`;
+                div_var.textContent = `Result: ${sub}`;
                 resolve(sub);
             }, 1000);
         });
@@ -33,7 +33,7 @@ btn_var.addEventListener('click', () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 let did = sub / 2;
-                div_var.textContent = `Result : ${did}`;
+                div_var.textContent = `Result: ${did}`;
                 resolve(did);
             }, 1000);
         });
@@ -42,7 +42,7 @@ btn_var.addEventListener('click', () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 let add = did + 10;
-                div_var.textContent = `Final Result : ${add}`;
+                div_var.textContent = `Final Result: ${add}`;
                 resolve(add);
             }, 1000);
         });
