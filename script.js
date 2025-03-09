@@ -43,11 +43,11 @@ btn_var.addEventListener('click', () => {
 
         return new Promise((res) => {
             setTimeout(() => {
-                res(sub);
+                res(did);
             }, 1000);
         });
-    }).then((sub) => {
-        let add = sub + 10;
+    }).then((did) => {
+        let add = did + 10;
         div_var.textContent = `Final Result : ${add}`;
     })
 
